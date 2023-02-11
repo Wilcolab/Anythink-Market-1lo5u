@@ -8,12 +8,14 @@ export const SearchBox = ({onSearch}) => {
         setSearchTitle(value);
         if(value.length > 2) {
             onSearch(
+                value,
                 (page) => agent.Items.byTitle(searchTitle, page),
                 agent.Items.byTitle(searchTitle)
             )
         }
         if(value.length === 0) {
             onSearch(
+                value,
                 (page) => agent.Items.all(page),
                 agent.Items.all()
             )
