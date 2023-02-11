@@ -59,3 +59,16 @@ body {
 .user-info {
   min-width: 800px;
 }
+
+.home-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_box {
+  margin: 0 0.5em;
+  padding: 0.25em 0.5em;
+  width: 50%;
+  min-width: 300px;
+}
