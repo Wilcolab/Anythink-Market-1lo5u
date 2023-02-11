@@ -26,8 +26,8 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({ type: HOME_PAGE_LOADED, tab, pager, payload }),
   onUnload: () => 
     dispatch({ type: HOME_PAGE_UNLOADED }),
-  onSearch: (pager, payload) => 
-    dispatch({ type: SEARCH_ITEM, pager, payload }),
+  onSearch: (searchTitle, pager, payload) => 
+    dispatch({ type: SEARCH_ITEM, searchTitle, pager, payload }),
 });
 
 class Home extends React.Component {

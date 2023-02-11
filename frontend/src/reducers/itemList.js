@@ -36,6 +36,7 @@ const reducer = (state = {}, action) => {
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
         currentPage: action.page,
+        searchTitle: null,
       };
     case APPLY_TAG_FILTER:
       return {
@@ -45,6 +46,7 @@ const reducer = (state = {}, action) => {
         itemsCount: action.payload.itemsCount,
         tab: null,
         tag: action.tag,
+        searchTitle: null,
         currentPage: 0,
       };
     case SEARCH_ITEM:
@@ -55,6 +57,7 @@ const reducer = (state = {}, action) => {
         itemsCount: action.payload.itemsCount,
         tab: null,
         tag: null,
+        searchTitle: action.searchTitle,
         currentPage: 0,
       };
     case HOME_PAGE_LOADED:
@@ -65,6 +68,7 @@ const reducer = (state = {}, action) => {
         items: action.payload[1].items,
         itemsCount: action.payload[1].itemsCount,
         currentPage: 0,
+        searchTitle: null,
         tab: action.tab,
       };
     case HOME_PAGE_UNLOADED:
@@ -77,6 +81,7 @@ const reducer = (state = {}, action) => {
         itemsCount: action.payload.itemsCount,
         tab: action.tab,
         currentPage: 0,
+        searchTitle: null,
         tag: null,
       };
     case PROFILE_PAGE_LOADED:
@@ -86,6 +91,7 @@ const reducer = (state = {}, action) => {
         pager: action.pager,
         items: action.payload[1].items,
         itemsCount: action.payload[1].itemsCount,
+        searchTitle: null,
         currentPage: 0,
       };
     case PROFILE_PAGE_UNLOADED:
